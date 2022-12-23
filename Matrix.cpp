@@ -38,12 +38,14 @@ Matrix::Matrix(float** matr, uint rows, uint columns){
 			*(*(this->matr + i) + j) = matr[i][j];
 }
 
+
 // Destructors
 Matrix::~Matrix(){
 	for (uint i = 0; i < rows; i++)
 		delete [] (*(this->matr + i));
 	delete [] this->matr;
 }
+
 
 // Getters
 uint Matrix::getColumns() const{
@@ -52,6 +54,19 @@ uint Matrix::getColumns() const{
 uint Matrix::getRows() const{
 	return this->rows;
 }
+
+
+// Returns transpose matrix
+Matrix Matrix::transpose() const{
+	Matrix result(this->columns, this->rows);
+
+	for (uint i = 0; i < result.rows; i++)
+		for (uint j = 0; j < result.columns; j++)
+			result[i][j] = this->matr[j][i];
+
+	return result;
+}
+
 
 // Arithmetical operators
 Matrix operator+(Matrix lhs, const Matrix& rhs){

@@ -29,6 +29,9 @@ public:
 	uint getColumns() const;
 	uint getRows() const;
 
+	// Returns transpose matrix
+	Matrix transpose() const;
+
 	// Arithmetical operators
 	friend Matrix operator+(Matrix lhs, const Matrix& rhs);
 	friend Matrix operator-(Matrix lhs, const Matrix& rhs);
