@@ -28,6 +28,7 @@ public:
 	// Getters
 	uint getColumns() const;
 	uint getRows() const;
+	float getValue(uint i, uint j) const;
 
 	// Returns transpose matrix
 	Matrix transpose() const;

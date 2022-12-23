@@ -51,8 +51,13 @@ Matrix::~Matrix(){
 uint Matrix::getColumns() const{
 	return this->columns;
 }
+
 uint Matrix::getRows() const{
 	return this->rows;
+}
+
+float Matrix::getValue(uint i, uint j) const{
+	return this->matr[i][j];
 }
 
 
