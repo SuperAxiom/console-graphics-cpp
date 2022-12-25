@@ -15,6 +15,9 @@ public:
 
     // Getters
     Matrix getCoordinates() const;
+    float getX() const;
+    float getY() const;
+    float getZ() const;
     float getLenght() const;
 
     // Norm

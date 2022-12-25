@@ -22,6 +22,18 @@ Matrix Vector3d::getCoordinates() const{
     return this->coordinates;
 }
 
+float Vector3d::getX() const{
+    return this->coordinates.getValue(0, 0);
+}
+
+float Vector3d::getY() const{
+    return this->coordinates.getValue(1, 0);
+}
+
+float Vector3d::getZ() const{
+    return this->coordinates.getValue(2, 0);
+}
+
 float Vector3d::getLenght() const{
     return this->length;
 }
