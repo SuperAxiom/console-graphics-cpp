@@ -144,3 +144,18 @@ Matrix operator*(const Matrix& lhs, float rhs){
 
 	return result;
 }
+
+bool operator==(const Matrix& lhs, const Matrix& rhs){
+	if (lhs.columns != rhs.columns)
+		return false;
+
+	if (lhs.rows != rhs.rows)
+		return false;
+	
+	for (uint i = 0; i < lhs.rows; i++)
+		for (uint j = 0; j < lhs.columns; j++)
+			if (lhs.matr[i][j] != rhs.matr[i][j])
+				return false;
+	
+	return true;
+}
