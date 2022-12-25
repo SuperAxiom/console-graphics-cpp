@@ -32,6 +32,7 @@ public:
     friend float    operator*(Vector3d lhs, const Vector3d& rhs);
     friend Vector3d operator*(float lhs, const Vector3d& rhs);
     friend Vector3d operator*(Vector3d lhs, const float& rhs);
+    friend bool     operator==(const Vector3d& lhs, const Vector3d& rhs);
 };
 
 #endif

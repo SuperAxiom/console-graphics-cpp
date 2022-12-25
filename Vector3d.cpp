@@ -48,7 +48,6 @@ Vector3d Vector3d::norm() const{
     return Vector3d(x, y, z);
 }
 
-
 // Others
 bool Vector3d::isCollinear(const Vector3d& vector){
     float k = this->getX() / vector.getX();
@@ -56,6 +55,7 @@ bool Vector3d::isCollinear(const Vector3d& vector){
         return true;
     return false;
 }
+
 
 // Arithmetical operations
 Vector3d operator+(Vector3d lhs, const Vector3d& rhs){
