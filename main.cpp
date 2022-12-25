@@ -5,10 +5,10 @@
 
 using namespace std;
 
-// Point in 3d
+/*// Point in 3d
 struct Point3d{
 	float x, y, z;
-};
+};*/
 
 Point3d createPoint3d(float x, float y, float z){
 	Point3d result;
