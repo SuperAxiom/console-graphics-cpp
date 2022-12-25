@@ -5,22 +5,12 @@
  *      Author: vladyslav
  */
 
-#include "Point3d.h"
+#include "Point3d.hpp"
 
 // Constructor;
 Point3d::Point3d(float x, float y, float z){
-	float** matr;
-
-	matr = new float*[3];
-	for (uint i = 0; i < 3; i++)
-		*(matr + i) = new float;
-
-	*(*(matr + 0) + 0) = x;
-	*(*(matr + 1) + 0) = y;
-	*(*(matr + 2) + 0) = z;
-
-
-	this->coordinates = Matrix(matr, 3, 1);
+	float values[3] = {x, y, z};
+	this->coordinates = Matrix(values, 3);
 }
 
 // Getters

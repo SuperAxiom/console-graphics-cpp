@@ -21,6 +21,7 @@ public:
 	// Constructors
 	Matrix(uint rows = 2, uint columns = 2);	// Creates zero matrix
 	Matrix(float** matr, uint rows, uint columns);
+	Matrix(float* values, uint size);	// Create matrix size x 1 with given values
 
 	// Destructors
 	~Matrix();

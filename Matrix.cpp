@@ -39,6 +39,13 @@ Matrix::Matrix(float** matr, uint rows, uint columns){
 }
 
 
+Matrix::Matrix(float* values, uint size){
+	Matrix(size, 1);
+
+	for (uint i = 0; i < size; i++)
+		this->matr[i][0] = values[i];
+}
+
 // Destructors
 Matrix::~Matrix(){
 	for (uint i = 0; i < rows; i++)
