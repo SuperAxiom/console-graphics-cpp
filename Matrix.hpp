@@ -19,7 +19,7 @@ class Matrix {
 
 public:
 	// Constructors
-	Matrix(uint rows, uint columns);	// Creates zero matrix
+	Matrix(uint rows = 2, uint columns = 2);	// Creates zero matrix
 	Matrix(float** matr, uint rows, uint columns);
 
 	// Destructors

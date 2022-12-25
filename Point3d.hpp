@@ -8,7 +8,7 @@
 #ifndef CONSOLE_GRAPHICS_CPP_POINT3D_H_
 #define CONSOLE_GRAPHICS_CPP_POINT3D_H_
 
-#include "Matrix.h"
+#include "Matrix.hpp"
 
 class Point3d {
 	Matrix coordinates;

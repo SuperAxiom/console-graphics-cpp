@@ -5,7 +5,7 @@
  *      Author: vladyslav
  */
 
-#include "Matrix.h"
+#include "Matrix.hpp"
 
 // Constructors
 Matrix::Matrix(uint rows, uint columns){
@@ -67,7 +67,7 @@ Matrix Matrix::transpose() const{
 
 	for (uint i = 0; i < result.rows; i++)
 		for (uint j = 0; j < result.columns; j++)
-			result[i][j] = this->matr[j][i];
+			result.matr[i][j] = this->matr[j][i];
 
 	return result;
 }
