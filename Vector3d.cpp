@@ -9,6 +9,14 @@ Vector3d::Vector3d(float x, float y, float z){
     this->length = sqrt(x*x + y*y + z*z);
 }
 
+Vector3d::Vector3d(Point3d begin, Point3d end){
+    float x = end.getX() - begin.getX();
+    float y = end.getY() - begin.getY();
+    float z = end.getZ() - begin.getZ();
+
+    Vector3d(x, y, z);
+}
+
 // Getters
 Matrix Vector3d::getCoordinates() const{
     return this->coordinates;

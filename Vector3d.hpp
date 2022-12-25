@@ -2,6 +2,7 @@
 #define CONSOLE_GRAPHICS_CPP_VECTOR3D_H_
 
 #include "Matrix.hpp"
+#include "Point3d.hpp"
 #include <cmath>
 
 class Vector3d{
@@ -10,6 +11,7 @@ class Vector3d{
 public:
     // Constructors
     Vector3d(float x = 1.0, float y = 1.0, float z = 1.0);
+    Vector3d(Point3d begin, Point3d end);
 
     // Getters
     Matrix getCoordinates() const;
