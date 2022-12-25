@@ -14,7 +14,7 @@ class Point3d {
 	Matrix coordinates;
 public:
 	// Constructor;
-	Point3d(float x, float y, float z);
+	Point3d(float x = 0, float y = 0, float z = 0);
 
 	// Getters
 	float getX() const;
