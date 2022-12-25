@@ -49,6 +49,14 @@ Vector3d Vector3d::norm() const{
 }
 
 
+// Others
+bool Vector3d::isCollinear(const Vector3d& vector){
+    float k = this->getX() / vector.getX();
+    if (k * vector == *this)
+        return true;
+    return false;
+}
+
 // Arithmetical operations
 Vector3d operator+(Vector3d lhs, const Vector3d& rhs){
     Matrix lhs_coor = lhs.getCoordinates();
@@ -103,4 +111,8 @@ Vector3d operator*(Vector3d lhs, const float& rhs){
     float z = rhs * lhs_coor.getValue(2, 0);
 
     return Vector3d(x, y, z);  
+}
+
+bool operator==(const Vector3d& lhs, const Vector3d& rhs){
+    return lhs.coordinates == rhs.coordinates;
 }

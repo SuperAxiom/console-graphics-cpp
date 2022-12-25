@@ -23,6 +23,9 @@ public:
     // Norm
     Vector3d norm() const;  // Returns normalized vector
 
+    // Others
+    bool isCollinear(const Vector3d& vector);
+
     // Arithmetical operations
     friend Vector3d operator+(Vector3d lhs, const Vector3d& rhs);
     friend Vector3d operator-(Vector3d lhs, const Vector3d& rhs);
