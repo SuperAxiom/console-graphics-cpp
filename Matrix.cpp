@@ -82,6 +82,19 @@ float Matrix::getValue(uint i, uint j) const{
 }
 
 
+// Setters
+void Matrix::setValue(float value, uint i, uint j){
+	try{
+		this->matr[i][j] = value;
+	}
+	catch(const std::exception& e){
+		throw e;
+	}
+	
+	
+}
+
+
 // Returns transpose matrix
 Matrix Matrix::transpose() const{
 	Matrix result(this->columns, this->rows);

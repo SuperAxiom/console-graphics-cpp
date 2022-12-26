@@ -32,6 +32,9 @@ public:
 	uint getRows() const;
 	float getValue(uint i, uint j) const;
 
+	// Setters
+	void setValue(float value, uint i, uint j);
+
 	// Returns transpose matrix
 	Matrix transpose() const;
 
