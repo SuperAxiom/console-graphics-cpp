@@ -39,7 +39,6 @@ Matrix::Matrix(float** matr, uint rows, uint columns){
 }
 
 Matrix::Matrix(float* values, uint size){
-	Matrix(size, 1);
 	this->rows = size;
 	this->columns = 1;
 
