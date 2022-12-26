@@ -29,7 +29,7 @@ bool Sphere::isBelong(const Point3d& point){
     float lhs = 0.0;
     lhs += (x - x0) * (x - x0);
     lhs += (y - y0) * (y - y0);
-    lhs += (y - y0) * (y - y0);
+    lhs += (z - z0) * (z - z0);
 
     float rhs = r*r;
 
