@@ -113,6 +113,16 @@ Matrix Matrix::transpose() const{
 	return result;
 }
 
+// Display
+void Matrix::display() const{
+	for (int i = 0; i < this->rows; i++){
+		for (int j = 0; j < this->columns; j++){
+			cout << setw(3) << this->matr[i][j] << " ";
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
 
 // Arithmetical operators
 Matrix operator+(Matrix lhs, const Matrix& rhs){

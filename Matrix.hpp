@@ -9,6 +9,7 @@
 #define CONSOLE_GRAPHICS_CPP_MATRIX_H_
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -37,6 +38,9 @@ public:
 
 	// Returns transpose matrix
 	Matrix transpose() const;
+
+	// Display
+	void display() const;
 
 	// Arithmetical operators
 	friend Matrix operator+(Matrix lhs, const Matrix& rhs);
