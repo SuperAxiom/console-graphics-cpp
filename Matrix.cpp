@@ -38,12 +38,26 @@ Matrix::Matrix(float** matr, uint rows, uint columns){
 			*(*(this->matr + i) + j) = matr[i][j];
 }
 
-
 Matrix::Matrix(float* values, uint size){
 	Matrix(size, 1);
 
 	for (uint i = 0; i < size; i++)
 		this->matr[i][0] = values[i];
+}
+
+Matrix::Matrix(const Matrix& matrix){
+	this->rows = matrix.rows;
+	this->columns = matrix.columns;
+	
+	// Allocating memory
+	this->matr = new float*[this->rows];
+	for (uint i = 0; i < this->rows; i++)
+		*(this->matr + i) = new float[this->columns];
+
+	// Copying values
+	for (uint i = 0; i < this->rows; i++)
+		for (uint j = 0; j < this->columns; j++)
+			this->matr[i][j] = matrix.matr[i][j];
 }
 
 // Destructors
