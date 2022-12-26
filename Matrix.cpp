@@ -40,7 +40,15 @@ Matrix::Matrix(float** matr, uint rows, uint columns){
 
 Matrix::Matrix(float* values, uint size){
 	Matrix(size, 1);
+	this->rows = size;
+	this->columns = 1;
 
+	// Allocating memory
+	this->matr = new float*[rows];
+	for (uint i = 0; i < rows; i++)
+		*(this->matr + i) = new float[columns];
+
+	// Copying values
 	for (uint i = 0; i < size; i++)
 		this->matr[i][0] = values[i];
 }
