@@ -115,10 +115,11 @@ Matrix Matrix::transpose() const{
 
 // Display
 void Matrix::display() const{
-	for (int i = 0; i < this->rows; i++){
-		for (int j = 0; j < this->columns; j++){
+	for (uint i = 0; i < this->rows; i++){
+		for (uint j = 0; j < this->columns; j++){
 			cout << setw(3) << this->matr[i][j] << " ";
 		}
+		cout << endl;
 		cout << endl;
 	}
 	cout << endl;
