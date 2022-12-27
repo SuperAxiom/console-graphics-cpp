@@ -42,13 +42,14 @@ public:
 	// Display
 	void display() const;
 
-	// Arithmetical operators
+	// Operators
 	friend Matrix operator+(Matrix lhs, const Matrix& rhs);
 	friend Matrix operator-(Matrix lhs, const Matrix& rhs);
 	friend Matrix operator*(Matrix lhs, const Matrix& rhs);
 	friend Matrix operator*(float lhs, const Matrix& rhs);
 	friend Matrix operator*(const Matrix& lhs, float rhs);
 	friend bool   operator==(const Matrix& lhs, const Matrix& rhs);
+	Matrix& operator= (const Matrix& matrix);
 };
 
 #endif /* CONSOLE_GRAPHICS_CPP_MATRIX_H_ */

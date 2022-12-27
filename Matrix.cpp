@@ -71,7 +71,7 @@ Matrix::Matrix(const Matrix& matrix){
 Matrix::~Matrix(){
 	for (uint i = 0; i < rows; i++)
 		delete [] (*(this->matr + i));
-	delete [] this->matr;
+	delete [] (this->matr);
 }
 
 
@@ -203,4 +203,27 @@ bool operator==(const Matrix& lhs, const Matrix& rhs){
 				return false;
 	
 	return true;
+}
+
+Matrix& Matrix::operator= (const Matrix& matrix){
+	// Free memory
+	for (uint i = 0; i < rows; i++)
+		delete [] (*(this->matr + i));
+	delete [] (this->matr);
+	
+	// Changing size
+	this->rows = matrix.rows;
+	this->columns = matrix.columns;
+
+	// Allocating memory
+	this->matr = new float*[this->rows];
+	for (uint i = 0; i < this->rows; i++)
+		*(this->matr + i) = new float[this->columns];
+
+	// Copying values
+	for (uint i = 0; i < this->rows; i++)
+		for (uint j = 0; j < this->columns; j++)
+			this->matr[i][j] = matrix.matr[i][j];
+
+	return *this;
 }
