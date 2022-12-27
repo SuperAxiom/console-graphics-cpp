@@ -26,3 +26,8 @@ float Point3d::getZ() const{
 	return this->coordinates.getValue(2, 0);
 }
 
+
+// Display
+void Point3d::display() const{
+	this->coordinates.display();
+}

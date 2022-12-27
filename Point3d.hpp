@@ -20,6 +20,9 @@ public:
 	float getX() const;
 	float getY() const;
 	float getZ() const;
+
+	// Display
+	void display() const;
 };
 
 #endif /* CONSOLE_GRAPHICS_CPP_POINT3D_H_ */
